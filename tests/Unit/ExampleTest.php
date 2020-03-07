@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Bundle\Tests\Unit;
+namespace PhpBundle\Notify\Tests\Unit;
 
 use PhpLab\Test\Base\BaseTest;
 
