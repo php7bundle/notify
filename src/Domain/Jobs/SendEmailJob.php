@@ -5,9 +5,10 @@ namespace PhpBundle\Notify\Domain\Jobs;
 use PhpBundle\Notify\Domain\Entities\EmailEntity;
 use PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface;
 use PhpBundle\Queue\Domain\Interfaces\JobInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
-class SendEmailJob implements JobInterface
+class SendEmailJob implements JobInterface, ContainerAwareInterface
 {
 
     use ContainerAwareTrait;
