@@ -7,7 +7,7 @@ use PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface;
 use PhpBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
 use PhpBundle\Notify\Domain\Jobs\SendEmailJob;
 use PhpBundle\Queue\Domain\Enums\PriorityEnum;
-use PhpBundle\Queue\Domain\Interfaces\JobServiceInterface;
+use PhpBundle\Queue\Domain\Interfaces\Services\JobServiceInterface;
 
 class EmailService implements EmailServiceInterface
 {
