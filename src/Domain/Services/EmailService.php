@@ -3,6 +3,7 @@
 namespace PhpBundle\Notify\Domain\Services;
 
 use PhpBundle\Notify\Domain\Entities\EmailEntity;
+use PhpBundle\Notify\Domain\Enums\ChannelEnum;
 use PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface;
 use PhpBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
 use PhpBundle\Notify\Domain\Jobs\SendEmailJob;
@@ -25,7 +26,7 @@ class EmailService implements EmailServiceInterface
     {
         $emailJob = new SendEmailJob($this);
         $emailJob->entity = $emailEntity;
-        $pushResult = $this->jobService->push($emailJob);
+        $pushResult = $this->jobService->push($emailJob, $priority, ChannelEnum::EMAIL);
     }
 
 }
